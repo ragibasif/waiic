@@ -35,7 +35,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -std=c99 -O2 -I.
 
 # Source files
-SRCS = main.c
+SRCS = main.c lexer.c token.c
 
 # Object files (derived from source files)
 OBJS = $(SRCS:.c=.o)

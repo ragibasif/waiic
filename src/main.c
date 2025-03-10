@@ -1,11 +1,12 @@
-#include "lexer.h"
+/*#include "lexer.h"*/
 #include "token.h"
 #include <stdio.h>
+#include <stdlib.h>
 
-void test_token_h();
-void test_lexer_h();
+void testToken() { Token *token; }
 
 int main(void) {
   printf("monkey\n");
+  testToken();
   return 0;
 }
