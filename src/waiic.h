@@ -1,6 +1,9 @@
-/*token.h*/
-#ifndef __TOKEN_H__
-#define __TOKEN_H__
+/*waiic.h*/
+#ifndef __WAIIC_H__
+#define __WAIIC_H__
+#include <stdlib.h>
+
+/*token*/
 
 /*#define ILLEGAL "ILLEGAL"*/
 /*#define EOF "EOF"*/
@@ -42,4 +45,21 @@ typedef struct {
 /*Token *newToken(TokenType type, char *literal);*/
 /*Token *makeToken(TokenType type);*/
 
-#endif // __TOKEN_H__
+/*lexer*/
+
+/*lexical analysis (lexing) - turning source code into tokens*/
+
+typedef struct {
+  char *input;      // input string
+  size_t size;      // size of the input string
+  int position;     // current position in input (points to current char)
+  int readPosition; // current reading position in input (after current char)
+  char ch;          // current char under examination
+} Lexer;
+
+Lexer *lexer; // make the lexer a global variable
+
+Lexer *New(char *input, size_t size);
+
+void readChar();
+#endif // __WAIIC_H__
