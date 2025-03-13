@@ -1,5 +1,6 @@
 /*#include "lexer.h"*/
-#include "waiic.h"
+#include "lexer.h"
+#include "token.h"
 #include <stdio.h>
 #include <stdlib.h>
 
